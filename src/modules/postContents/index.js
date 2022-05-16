@@ -83,6 +83,8 @@ function buildPostContents() {
 
         catalogContents += `</ul>`;
 
+        catalogContents += `<div style="padding: 15px;text-align:center">加入QQ群：1022985150 或关注公众号一起探讨技术 <br> <img src="https://static.xbaby.xyz/qrcode.jpg"/> </div>`;
+
         $('.esa-contents').append(catalogContents);
     }
 }
