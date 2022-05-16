@@ -1082,15 +1082,30 @@ a {
   }
 
   .diggit {
+    border: 1px solid var(--theme-color);
+
     &::before {
       content: "\f087";
       font-family: FontAwesome;
       opacity: 0.7;
     }
-  }
 
+    
+  }
+  .diggit.shake {
+    animation: shake 800ms ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  @keyframes shake { /* 水平抖动，核心代码 */
+      10%, 90% { transform: translate3d(-1px, 0, 0); }
+      20%, 80% { transform: translate3d(+2px, 0, 0); }
+      30%, 70% { transform: translate3d(-4px, 0, 0); }
+      40%, 60% { transform: translate3d(+4px, 0, 0); }
+      50% { transform: translate3d(-4px, 0, 0); }
+  }
   .buryit {
     margin-left: 15px;
+    border: 1px solid var(--theme-color);
 
     &::before {
       content: "\f088";
@@ -1098,6 +1113,8 @@ a {
       opacity: 0.7;
     }
   }
+  
+
 }
 
 .topicListFooter {
